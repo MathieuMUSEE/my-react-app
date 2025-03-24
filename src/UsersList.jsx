@@ -17,11 +17,15 @@ function UsersList() {
   return (
     <div>
       <h2>Liste des Utilisateurs</h2>
-      <ul>
-        {users.map(user => (
-          <li key={user.id}>{user.nom} {user.prenom}</li>
-        ))}
-      </ul>
+      {users.length === 0 ? (
+        <p>Aucun utilisateur retourné</p>
+      ) : (
+        <ul>
+          {users.map(user => (
+            <li key={user.id}>{user.nom} {user.prenom}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

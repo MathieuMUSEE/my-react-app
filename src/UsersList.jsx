@@ -5,7 +5,7 @@ function UsersList() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://workout-planner-service:3000/users')
+    axios.get('http://localhost:30002/users')
       .then(response => {
         setUsers(response.data);
       })
